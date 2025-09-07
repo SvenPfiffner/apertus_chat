@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "apertus"
+version = "0.1.0"
+description = "Python client for the Apertus (Public AI Gateway) inference API"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [{ name = "Sven Pfiffner", email = "svenp@ethz.ch" }]
+license = { text = "MIT" }
+keywords = ["apertus", "llm", "chat", "ai", "publicai", "client"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+dependencies = [
+  "httpx>=0.25",
+  "pydantic>=2.4",
+  "typing-extensions>=4.7",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["apertus*"]
